@@ -26,6 +26,8 @@ public class Fenster extends javax.swing.JFrame {
         Container pane = getContentPane();
         Solv = new Solver();
         layout = new BorderLayout();
+        runner = new Mazerunner();
+      
         
         pane.setLayout(layout);
         
