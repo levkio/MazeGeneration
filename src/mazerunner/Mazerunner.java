@@ -12,8 +12,8 @@ import javax.swing.JPanel;
 
 public class Mazerunner extends JPanel {
  
-    final static int ANZAHL_ZEILEN = 20;
-    final static int ANZAHL_SPALTEN = 20;
+    final static int ANZAHL_ZEILEN = 5;
+    final static int ANZAHL_SPALTEN = 5;
     Zelle[][] labyrinthfeld = new Zelle[ANZAHL_ZEILEN][ANZAHL_SPALTEN];
     Stack<Zelle> arbeitspfad = new Stack<Zelle>();
     Stack<Zelle> restlicheZellen = new Stack<Zelle>();
@@ -127,7 +127,7 @@ public class Mazerunner extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-        final int zellgroesse = 10;
+        final int zellgroesse = 30;
         int ursprungX = 30;
         int ursprungY = 30;
 
@@ -154,6 +154,7 @@ public class Mazerunner extends JPanel {
                     lin = new Line2D.Float(x + zellgroesse, y, x + zellgroesse, y + zellgroesse);
                     g2.draw(lin);
                 }
+                g2.drawString(zelle.toString(), x + (zellgroesse/2), y + (zellgroesse/2));
 
             }
 

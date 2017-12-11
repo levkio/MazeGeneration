@@ -35,7 +35,7 @@ public class Fenster extends javax.swing.JFrame {
         jbSolve.addActionListener((ActionEvent e) -> {
             Solv.randomSolver(runner.labyrinthfeld);
         });
-        drawingPanel = new Mazerunner();
+        drawingPanel = runner;
         
         pane.add(jbSolve, BorderLayout.SOUTH);
         pane.add(drawingPanel, BorderLayout.CENTER);

@@ -15,6 +15,8 @@ public class Zelle {
     boolean wand_ost = true;
     boolean wand_sued = true;
     boolean wand_west = true;
+    boolean visited = false;
+    
     final int zeilenposition;
     final int spaltenposition;
  
@@ -22,4 +24,9 @@ public class Zelle {
         zeilenposition = zeile;
         spaltenposition = spalte;
     }
+    @Override
+    public String toString(){
+        return ""+zeilenposition +"/"+spaltenposition;
+    }
 }
+
